@@ -14,3 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/ici', function() { return 'Je suis la page ici !'; });
