@@ -29,7 +29,7 @@ Route::resource('comments', 'CommentController',
 // all routes that are not home or api will be redirected to the frontend 
 // this allows angular to route them 
 
-Route::any('/', function()
+/*Route::any('/', function()
 {
     return View::make('index'); 
-});
+});*/
