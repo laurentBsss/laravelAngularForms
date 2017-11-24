@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use App\Comments;
 
 class CommentController extends Controller
 {
@@ -17,7 +19,7 @@ class CommentController extends Controller
      */
     public function index()
     {
-        return Response::json(Comment::get());
+        return Response::json(Comments::get());
     }
 
     /**
@@ -41,7 +43,7 @@ class CommentController extends Controller
      * @return Response
      */
     public function store(Request $request)
-    {   
+    {   var_dump($request->input('author'));
         Comment::create(array(
             'author' => $request->input('author'),
             'text' => $request->input('text')
