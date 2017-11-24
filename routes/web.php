@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 Route::get('/ici', function() { return 'Je suis la page ici !'; });
 
 // HOME PAGE ===================================  
@@ -18,5 +22,7 @@ Route::get('/ici', function() { return 'Je suis la page ici !'; });
 // we will return a PHP file that will hold all of our Angular content
 // see the "Where to Place Angular Files" below to see ideas on how to structure your app return  
 Route::get('/', function() {   
-    View::make('index'); // will return app/views/index.php 
+    //View::make('index'); // will return app/views/index.php 
+    return view('index');
 });
+
