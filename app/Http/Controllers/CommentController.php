@@ -43,8 +43,8 @@ class CommentController extends Controller
      * @return Response
      */
     public function store(Request $request)
-    {   var_dump($request->input('author'));
-        Comment::create(array(
+    {  // var_dump($request->input('author'));
+        Comments::create(array(
             'author' => $request->input('author'),
             'text' => $request->input('text')
         ));
